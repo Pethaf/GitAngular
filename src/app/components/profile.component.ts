@@ -9,6 +9,7 @@ export class ProfileComponent
  { 
    constructor(private _githubsevice: GithubService)
    {
-
+      this._githubsevice.getUser().subscribe(user => 
+      console.log(user));
    }
  }
