@@ -14,7 +14,7 @@ export class GithubService
         console.log("Github service ready");
         this.username = "octocat";
     }
-    getUser(): Observable<Object>
+    getUser()
     {
         return this._http.get("https://api.github.com/users/" + this.username).
         map(res => res.json());
