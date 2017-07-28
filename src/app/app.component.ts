@@ -4,7 +4,8 @@ import { GithubService } from './services/github.service';
 @Component({
   selector: 'my-app',
   providers: [GithubService],
-  template: `<profile></profile>
+  template: `<navbar></navbar>
+             <profile></profile>
             `,
 })
 export class AppComponent  { name = 'Angular'; }
