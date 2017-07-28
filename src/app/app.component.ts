@@ -8,4 +8,4 @@ import { GithubService } from './services/github.service';
             <div class="container"> <profile></profile></div>
             `,
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  { }
