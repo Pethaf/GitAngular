@@ -11,17 +11,16 @@ export class GithubService
     private client_secret = "";
     constructor(private _http:Http)
     {
-        this.username = "octocat";
     }
-    getUser()
+    getUser(username:string = "octocat")
     {
-        return this._http.get("https://api.github.com/users/" + this.username).
+        return this._http.get("https://api.github.com/users/" + username).
         map(res => res.json());
         
     }
-    getRepos() 
+    getRepos(username:string="octocat") 
     {
-        return this._http.get("https://api.github.com/users/" + this.username + "/repos").
+        return this._http.get("https://api.github.com/users/" + username + "/repos").
         map(res => res.json()); 
     }
 
